@@ -1,10 +1,10 @@
 {
   "files": {
-    "main.js": "/psych-guide/static/js/main.2ddeccfb.js",
+    "main.js": "/psych-guide/static/js/main.8fba542b.js",
     "index.html": "/psych-guide/index.html",
-    "main.2ddeccfb.js.map": "/psych-guide/static/js/main.2ddeccfb.js.map"
+    "main.8fba542b.js.map": "/psych-guide/static/js/main.8fba542b.js.map"
   },
   "entrypoints": [
-    "static/js/main.2ddeccfb.js"
+    "static/js/main.8fba542b.js"
   ]
 }
