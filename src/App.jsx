@@ -345,6 +345,13 @@ export default function App() {
   const [openPhase, setOpenPhase] = useState("foundation");
   const t = dark ? themes.dark : themes.light;
 
+  useEffect(() => {
+    document.body.style.margin = "0";
+    document.body.style.padding = "0";
+    document.body.style.background = t.bg;
+    document.body.style.transition = "background 0.3s";
+  }, [t.bg]);
+
   const togglePhase = (id) => setOpenPhase(prev => prev === id ? null : id);
 
   const s = {
