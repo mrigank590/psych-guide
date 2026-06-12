@@ -346,10 +346,11 @@ export default function App() {
   const t = dark ? themes.dark : themes.light;
 
   useEffect(() => {
-    document.body.style.margin = "0";
-    document.body.style.padding = "0";
-    document.body.style.background = t.bg;
-    document.body.style.transition = "background 0.3s";
+    const html = document.documentElement;
+    const body = document.body;
+    const reset = { margin: "0", padding: "0", background: t.bg, transition: "background 0.3s", overflowX: "hidden" };
+    Object.assign(html.style, reset);
+    Object.assign(body.style, reset);
   }, [t.bg]);
 
   const togglePhase = (id) => setOpenPhase(prev => prev === id ? null : id);
@@ -357,10 +358,14 @@ export default function App() {
   const s = {
     root: {
       minHeight: "100vh",
+      width: "100%",
+      margin: 0,
+      padding: 0,
       background: t.bg,
       color: t.text,
       fontFamily: "'Inter', system-ui, -apple-system, sans-serif",
       transition: "background 0.3s, color 0.3s",
+      boxSizing: "border-box",
     },
     nav: {
       position: "sticky", top: 0, zIndex: 10,
